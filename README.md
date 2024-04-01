@@ -24,3 +24,12 @@
 - Spotify - https://www.spotify.com/de-en/download/windows/
 - OBS Studio - https://obsproject.com/download
 - Audio Interface Drivers - https://downloads.focusrite.com/focusrite/scarlett-2nd-gen/scarlett-2i4-2nd-gen
+
+
+---
+### Notes:
+#### Docker:
+- Ask IT to add you to the Docker user group
+- Open command prompt and run: `wsl --install`
+
+If Docker is stuck in _"Docker is starting..."_, installing wsl or switching to Hyper-V should help.
