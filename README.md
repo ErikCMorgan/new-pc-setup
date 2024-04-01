@@ -18,4 +18,5 @@
 - PHP - https://www.php.net/downloads.php
 ### Personal
 - Spotify - https://www.spotify.com/de-en/download/windows/
+- OBS Studio - https://obsproject.com/download
 - Audio Interface Drivers - https://downloads.focusrite.com/focusrite/scarlett-2nd-gen/scarlett-2i4-2nd-gen
