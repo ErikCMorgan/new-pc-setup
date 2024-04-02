@@ -61,3 +61,12 @@ It doesn't support a full dark mode on windows yet, but you can change the code 
 - Replace the `code_editor.xml` file with the one in this repository
 - Or you can find your own online and replace the contents within the `<language name="SCLEX_MYSQL"> </language>` tag
 - _(Optional)_ Open MySQL Workbench and go to `Edit` → `Preferences` → `Fonts and Colors` → `Select your scheme` dropdown. You can change this to different windows versions for a slightly different background as well.
+### Notepad++ Themes
+- Download the Obsidian or Material Theme xml files from this repository.
+- Open the windows _run_ app with `⊞ Win + r` and go to `%APPDATA%\Notepad++`
+- Open themes folder, create a new folder named themes if it doesn't exists.
+- Place downloaded .xml file(s) inside the folder.
+- Restart Notepad++.
+- Open Settings -> Style Configurator.
+- Select Material Theme from the theme drop-down box.
+- Click Save & Close
