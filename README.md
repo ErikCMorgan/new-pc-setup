@@ -39,11 +39,16 @@ If Docker Desktop is stuck in _"Starting the Docker Engine"_:
   - `taskkill /F /IM "Docker Desktop.exe"`
   - `taskkill /F /IM com.docker.backend.exe`
 - Open the windows _run_ app from the start menu or with `⊞ Win + r` and type in `optionalfeatures.exe`
-- Make sure that `Windows Subsystem for Linux`, `Windows Hypervisor Platform`, and `Virtual Machine Platform` boxes are checked.
+- Make sure that `Containers`, `Windows Subsystem for Linux`, `Windows Hypervisor Platform`, and `Virtual Machine Platform` boxes are checked.
 - Start Docker Desktop and pray
 
 If it still doesn't work, try this:
 - Search "Exploit protection" and open it in System settings
+- Set "Control Flow Guard (CFG)" to "Off by default"
+- Restart your computer
+<br></br>
+This is another way to do it manually if you don't see that option:
+<br></br>
 - Switch to "Program settings" tab
 - Locate `C:\Windows\System32\vmcompute.exe` in the list, expand it and click edit
   - If it doesn't exist, click "Add program to customize" -> "Choose exact file path" -> add `C:\Windows\System32\vmcompute.exe`
@@ -53,7 +58,11 @@ If it still doesn't work, try this:
   - `wsl --set-default-version 2`
 - Start Docker Desktop and pray harder than last time.
 <br></br>
-If all else fails, you can always use Hyper-V engine instead of WSL2. You can also check the firewall settings, make sure _Virtualization Technology for Directed I/O_ is enabled in the bios, reinstall docker, etc.
+If all else fails, you can always use Hyper-V engine instead of WSL2. You can also check the firewall settings, make sure _Virtualization Technology for Directed I/O_ is enabled in the bios, reinstall docker, etc. If you reinstall Docker, make sure you run these commands: 
+- `wsl --unregister docker-desktop `
+- `wsl --unregister docker-desktop-data`
+<br></br>
+This was the final solution for me after doing all of the above.
 ---
 ### MySQL Workbench Dark Theme
 It doesn't support a full dark mode on windows yet, but you can change the code editor theme:
