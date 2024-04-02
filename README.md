@@ -42,6 +42,16 @@ If Docker Desktop is stuck in _"Starting the Docker Engine"_:
 - Make sure that `Windows Subsystem for Linux`, `Windows Hypervisor Platform`, and `Virtual Machine Platform` boxes are checked.
 - Start Docker Desktop and pray
 
+If it still doesn't work, try this:
+- Search "Exploit protection" and open it in System settings
+- Switch to "Program settings" tab
+- Locate `C:\Windows\System32\vmcompute.exe` in the list, expand it and click edit
+  - If it doesn't exist, click "Add program to customize" -> "Choose exact file path" -> enter `C:\Windows\System32\vmcompute.exe`
+- After you click "Edit" on the `vmcompute.exe`, scroll down to "Control flow guard (CFG)" and uncheck the "Override system settings" option.
+- Apply those changes and run powershell or command prompt as admin and run these commands:
+  - `net start vmcompute`
+  - `wsl --set-default-version 2`
+- Start Docker Desktop and pray harder than last time.
 If all else fails, you can always use Hyper-V engine instead of WSL2. You can also check the firewall settings, make sure _Virtualization Technology for Directed I/O_ is enabled in the bios, reinstall docker, etc.
 
 ### MySQL Workbench Dark Theme
