@@ -39,7 +39,7 @@ If Docker Desktop is stuck in _"Starting the Docker Engine"_:
   - `taskkill /F /IM "Docker Desktop.exe"`
   - `taskkill /F /IM com.docker.backend.exe`
 - Open the windows _run_ app from the start menu or with `⊞ Win + r` and type in `optionalfeatures.exe`
-- Make sure that `Containers`, `Windows Subsystem for Linux`, `Windows Hypervisor Platform`, and `Virtual Machine Platform` boxes are checked.
+- Make sure that `Containers`, `Windows Subsystem for Linux`, `Windows Hypervisor Platform`, and `Virtual Machine Platform` boxes are checked/enabled, and `Hyper-V` is unchecked/disabled.
 - Start Docker Desktop and pray
 
 If it still doesn't work, try this:
