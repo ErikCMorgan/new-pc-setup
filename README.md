@@ -46,14 +46,15 @@ If it still doesn't work, try this:
 - Search "Exploit protection" and open it in System settings
 - Switch to "Program settings" tab
 - Locate `C:\Windows\System32\vmcompute.exe` in the list, expand it and click edit
-  - If it doesn't exist, click "Add program to customize" -> "Choose exact file path" -> enter `C:\Windows\System32\vmcompute.exe`
-- After you click "Edit" on the `vmcompute.exe`, scroll down to "Control flow guard (CFG)" and uncheck the "Override system settings" option.
+  - If it doesn't exist, click "Add program to customize" -> "Choose exact file path" -> add `C:\Windows\System32\vmcompute.exe`
+- After you click "Edit" on `C:\Windows\System32\vmcompute.exe`, scroll down to "Control flow guard (CFG)" and uncheck the "Override system settings" option.
 - Apply those changes and run powershell or command prompt as admin and run these commands:
   - `net start vmcompute`
   - `wsl --set-default-version 2`
 - Start Docker Desktop and pray harder than last time.
+<br></br>
 If all else fails, you can always use Hyper-V engine instead of WSL2. You can also check the firewall settings, make sure _Virtualization Technology for Directed I/O_ is enabled in the bios, reinstall docker, etc.
-
+---
 ### MySQL Workbench Dark Theme
 It doesn't support a full dark mode on windows yet, but you can change the code editor theme:
 - Go to `C:\Program Files\MySQL\MySQL Workbench 8.0 CE\data`
