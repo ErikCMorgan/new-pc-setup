@@ -39,7 +39,7 @@ If Docker Desktop is stuck in _"Starting the Docker Engine"_:
   - `taskkill /F /IM "Docker Desktop.exe"`
   - `taskkill /F /IM com.docker.backend.exe`
 - Open the windows _run_ app from the start menu or with `⊞ Win + r` and type in `optionalfeatures.exe`
-- Make sure that `Windows Subsystem for Linux` and `Virtual Machine Platform` boxes are checked.
+- Make sure that `Windows Subsystem for Linux`, `Windows Hypervisor Platform`, and `Virtual Machine Platform` boxes are checked.
 - Start Docker Desktop and pray
 
 If all else fails, you can always use Hyper-V engine instead of WSL2. You can also check the firewall settings, make sure _Virtualization Technology for Directed I/O_ is enabled in the bios, reinstall docker, etc.
