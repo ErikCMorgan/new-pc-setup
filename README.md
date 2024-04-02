@@ -27,9 +27,25 @@
 
 
 ---
-### Notes:
+## Notes:
 #### Docker:
+If Docker Desktop is stuck in _"Starting the Docker Engine"_:
 - Ask IT to add you to the Docker user group
 - Open command prompt and run: `wsl --install`
+- After installation completes (takes forever), shut down your computer and turn it back on (restart isn't enough)
+- Open command prompt or powershell and run `wsl -l -v`
+- Set wsl to version 2: `wsl --set-default-version 2`. More optional commands to stop wsl if it is running:
+  - `wsl --shutdown`
+  - `taskkill /F /IM "Docker Desktop.exe"`
+  - `taskkill /F /IM com.docker.backend.exe`
+- Open the windows _run_ app from the start menu or with `⊞ Win + r` and type in `optionalfeatures.exe`
+- Make sure that `Windows Subsystem for Linux` and `Virtual Machine Platform` boxes are checked.
+- Start Docker Desktop and pray
 
-If Docker is stuck in _"Docker is starting..."_, installing wsl or switching to Hyper-V should help.
+If all else fails, you can always use Hyper-V engine instead of WSL2. You can also check the firewall settings, make sure _Virtualization Technology for Directed I/O_ is enabled in the bios, reinstall docker, etc.
+
+#### MySQL Workbench Dark Theme
+It doesn't support a full dark mode on windows yet, but you can change the code editor theme:
+- Go to `C:\Program Files\MySQL\MySQL Workbench 8.0 CE\data`
+- Replace the `code_editor.xml` file with the one in this repository
+- Or you can find your own online and replace the contents within the `<language name="SCLEX_MYSQL"> </language>` tag
