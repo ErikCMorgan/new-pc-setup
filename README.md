@@ -14,7 +14,6 @@
 - Postman - https://www.postman.com/downloads/?utm_source=postman-home
 - MySQL Workbench - https://dev.mysql.com/downloads/workbench/
 - FileZilla - https://filezilla-project.org/download.php?platform=win64
-- Code Fonts - https://github.com/cancng/fonts
 - Citrix Workspace - https://www.citrix.com/downloads/workspace-app/
 - Node - https://nodejs.org/en/download
 - PHP - https://www.php.net/downloads.php
@@ -24,6 +23,8 @@
 - Spotify - https://www.spotify.com/de-en/download/windows/
 - OBS Studio - https://obsproject.com/download
 - Audio Interface Drivers - https://downloads.focusrite.com/focusrite/scarlett-2nd-gen/scarlett-2i4-2nd-gen
+- Code Fonts - https://github.com/cancng/fonts
+- PuTTY Color Themes - https://github.com/AlexAkulov/putty-color-themes
 
 
 ---
