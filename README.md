@@ -41,9 +41,13 @@ If Docker Desktop is stuck in _"Starting the Docker Engine"_:
   - `taskkill /F /IM com.docker.backend.exe`
 - Open the windows _run_ app from the start menu or with `⊞ Win + r` and type in `optionalfeatures.exe`
 - Make sure that `Containers`, `Windows Subsystem for Linux`, `Windows Hypervisor Platform`, and `Virtual Machine Platform` boxes are checked/enabled, and `Hyper-V` is unchecked/disabled.
+- You can also do this by running cmd as admin and running:
+```sql
+dism.exe /online /enable-feature /featurename:Microsoft-Hyper-V-All /featurename:VirtualMachinePlatform /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
 - Start Docker Desktop and pray
 
-If it still doesn't work, try this:
+If it still doesn't work, I would recommend restarting and do _not_ open Chrome. Im pretty sure I had a Chrome extension that was interfering. Also try this:
 - Search "Exploit protection" and open it in System settings
 - Set "Control Flow Guard (CFG)" to "Off by default"
 - Restart your computer
