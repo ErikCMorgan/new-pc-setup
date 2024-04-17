@@ -88,3 +88,22 @@ It doesn't support a full dark mode on windows yet, but you can change the code 
 If git bash is not starting in the correct user home directory when you first open it (e.g. it shows User.Name@BCLPTP20994 MINGW64 `/` instead of `~`):
 - Right click on Git Bash -> Properties
 - Replace the "Start in" location with this: `%HOMEDRIVE%%HOMEPATH%`
+
+### Windows 11 Save/Open File Dialog Freezing
+Your Quick access folder is probably corrupt, the best option is to delete the content of Quick Access, and then re-pin the folders you need there.
+Click your Start Button, then just type cmd and on the resulting menu, right click Command Prompt and select 'Run as Administrator'
+Paste thesse commands into Command Prompt and press Enter:
+```go
+del /F /Q %APPDATA%\Microsoft\Windows\Recent\*
+```
+```go
+del /F /Q %APPDATA%\Microsoft\Windows\Recent\AutomaticDestinations\*
+```
+```go
+del /F /Q %APPDATA%\Microsoft\Windows\Recent\CustomDestinations\*
+```
+Then, close Command Prompt
+- Open File Explorer, then at the top, click the 3 dots and select Options.
+- On the resulting dialog, use the drop-down menu to set File Explorer to open to 'This PC', instead of 'Home'.
+- Restart (not shut down) your PC.
+- Test if the File Open and File Save dialogs are working correctly.
