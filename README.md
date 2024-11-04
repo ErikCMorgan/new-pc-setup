@@ -107,3 +107,21 @@ Then, close Command Prompt
 - On the resulting dialog, use the drop-down menu to set File Explorer to open to 'This PC', instead of 'Home'.
 - Restart (not shut down) your PC.
 - Test if the File Open and File Save dialogs are working correctly.
+
+### PHP Windows Installation
+
+- Download the php x64 non thread safe zip file at https://windows.php.net/download#php-8.2
+- Extract the zip file and copy the contents to a new folder called `php`
+- Move the newly created `php` folder to your root file directory `C:\php`
+- Add this directory to your windows PATH environment variables.
+You can do this manually, or run the command prompt as administrator and paste this line: 
+```bash
+setx /M PATH "%PATH%;C:\php"
+```
+- Open a new command prompt and type `php -v` to confirm php is installed.
+
+### Composer Installation
+Once you have php installed, you will need Composer, which is a dependency manager for php applications.
+- Download the Composer-Setup.exe from https://getcomposer.org/download/
+- Click through the installation steps.
+- Open a new command prompt and type `composer -v` to confirm it installed correctly.
