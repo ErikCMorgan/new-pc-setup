@@ -85,6 +85,15 @@ It doesn't support a full dark mode on windows yet, but you can change the code 
 - Select Material Theme from the theme drop-down box.
 - Click Save & Close
 ### Git Bash
+1. To add Docker to the system PATH for git bash and allow commands such as 'docker compose up', create the `.bashrc` file
+```shell
+echo 'export PATH="$PATH:/c/Program Files/Docker/Docker/resources/bin"' >> ~/.bashrc
+```
+2. Source the file
+```shell
+source ~/.bashrc
+```
+#### Misc.
 If git bash is not starting in the correct user home directory when you first open it (e.g. it shows User.Name@BCLPTP20994 MINGW64 `/` instead of `~`):
 - Right click on Git Bash -> Properties
 - Replace the "Start in" location with this: `%HOMEDRIVE%%HOMEPATH%`
